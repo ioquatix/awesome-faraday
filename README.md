@@ -11,16 +11,17 @@ The following table show the available adapters and which features they support.
 
 | Adapter | Bundled with Faraday | Reason Phrase parsing | Compression (Gzip, Deflate) | Response Streaming | Parallel Requests | GET, HEAD, DELETE, TRACE Request Body | HEAD Response Body | TRACE Method | Local Socket Binding |
 | ----------------------- |  :---:  | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| [Async::HTTP::Faraday]  |   ✖️    |   ✔️   |   ✔️   |   ✔️   |   ✔️   |   ✔️   |   ✔️   |   ✔️   |   ✔️   |
 | [EM::HTTP]              | v1 only |   ✔️   |   ✖️   |   ✖️   |   ✔️   |   ✔️   |   ✖️   |   ✔️   |   ✔️   |
 | [EM::Synchrony]         | v1 only |   ✔️   |   ✖️   |   ✖️   |   ✔️   |   ✔️   |   ✖️   |   ✔️   |   ✔️   |
 | [Excon]                 | v1 only |   ✔️   |   ✖️   |   ✖️   |   ✖️   |   ✔️   |   ✔️   |   ✔️   |   ✖️   |
+| [HTTP.rb]               |   ✖️    |   ✔️   |   ✖️   |   ✖️   |   ✖️   |   ✔️   |   ✖️   |   ✔️   |   ✔️   |
 | [HttpClient]            | v1 only |   ✔️   |   ✔️   |   ✖️   |   ✖️   |   ✔️   |   ✔️   |   ✔️   |   ✔️   |
+| [httpx]                 |   ✖️    |   ✔️   |   ✔️   |   ✔️   |   ✔️   |   ✔️   |   ✔️   |   ✔️   |   ✔️   |
 | [Net::HTTP]             | v1 only |   ✔️   |   ✔️   |   ✔️   |   ✖️   |   ✔️   |   ✔️   |   ✔️   |   ✖️   |
 | [Net::HTTP::Persistent] | v1 only |   ✔️   |   ✔️   |   ✖️   |   ✖️   |   ✔️   |   ✔️   |   ✔️   |   ✖️   |
 | [Patron]                | v1 only |   ✔️   |   ✖️   |   ✖️   |   ✖️   |   ✖️   |   ✔️   |   ✖️   |   ✖️   |
 | [Typhoeus]              | v1 only |   ✖️   |   ✖️   |   ✖️   |   ✔️   |   ✔️   |   ✔️   |   ✔️   |   ✖️   |
-| [HTTP.rb]               |   ✖️    |   ✔️   |   ✖️   |   ✖️   |   ✖️   |   ✔️   |   ✖️   |   ✔️   |   ✔️   |
-| [httpx]                 |   ✖️    |   ✔️   |   ✔️   |   ✔️   |   ✔️   |   ✔️   |   ✔️   |   ✔️   |   ✔️   |
 
 
 ## Middleware
@@ -84,13 +85,14 @@ All the middleware below will need to be moved into their own gems.
 
 TBC
 
+[Async::HTTP::Faraday]:   https://github.com/socketry/async-http-faraday
 [EM::HTTP]:               https://github.com/lostisland/faraday-em_http
 [EM::Synchrony]:          https://github.com/lostisland/faraday-em_synchrony
 [Excon]:                  https://github.com/lostisland/faraday-excon
+[HTTP.rb]:                https://github.com/lostisland/faraday-http
 [HttpClient]:             https://github.com/lostisland/faraday-httpclient
+[httpx]:                  https://honeyryderchuck.gitlab.io/httpx/wiki/Faraday-Adapter
 [Net::HTTP]:              https://github.com/lostisland/faraday-net_http
 [Net::HTTP::Persistent]:  https://github.com/lostisland/faraday-net_http_persistent
 [Patron]:                 https://github.com/lostisland/faraday-patron
 [Typhoeus]:               https://github.com/typhoeus/typhoeus/blob/master/lib/typhoeus/adapters/faraday.rb
-[HTTP.rb]:                https://github.com/lostisland/faraday-http
-[httpx]:                  https://honeyryderchuck.gitlab.io/httpx/wiki/Faraday-Adapter
